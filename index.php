@@ -108,7 +108,7 @@ if($method = "POST"){
 
 		default;
         // si l'action n'est pas connue
-			$speech=$DFresult;
+			$speech=$DFresult+"héhé";
 			break;
 
 	}
@@ -118,7 +118,7 @@ if($method = "POST"){
 	$response-> fulfillmentText = $speech;
 
     //on écrit ici la source de la réponse : ici : webhook
-	$response->source= "webhook";
+	$response->source= "webhook2";
     //on encode $reponse pour l'avoir au format JSON
 	echo json_encode($response);
 
