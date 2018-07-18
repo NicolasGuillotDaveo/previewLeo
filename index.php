@@ -8,34 +8,34 @@
  * Documentation: http://docs.mongodb.org/ecosystem/drivers/php/
  * A PHP script connecting to a MongoDB database given a MongoDB Connection URI.
  */
-//require 'vendor/autoload.php'; // include Composer's autoloader
+require 'vendor/autoload.php'; // include Composer's autoloader
 // Create seed data
-//$seedData =
-//        array(
- //   "_id" => array( "$oid" => "5b4db11b76e8f426dcaad304")
-  //  ,
-  //  "LinkedInID"=> "LinkedInIdExemple3",
-  //  "email"=> "Exemple@gmail.com",
-  //  "firstname"=> "FirstNameExemple",
-  //"lastname"=> "LastNameExemple",
-  //  "image"=> "https://media.licdn.com/dms/image/C4E00AQGI1Fgn87sDdw/profile-originalphoto-shrink_900_1200/0?e=1531908000&v=beta&t=Hic2EeXt0gMHR0-fuI6YN3CtKy0X_CkqiPKZBCgm6jw",
-  //  "headline"=> "HeadLineExemple",
-  //  "__v"=> 0
-//);
-// echo json_encode($seedData);
+$seedData =
+        array(
+    "_id" => array( "$oid" => "5b4db11b76e8f426dcaad304")
+    ,
+    "LinkedInID"=> "LinkedInIdExemple3",
+    "email"=> "Exemple@gmail.com",
+    "firstname"=> "FirstNameExemple",
+  "lastname"=> "LastNameExemple",
+    "image"=> "https://media.licdn.com/dms/image/C4E00AQGI1Fgn87sDdw/profile-originalphoto-shrink_900_1200/0?e=1531908000&v=beta&t=Hic2EeXt0gMHR0-fuI6YN3CtKy0X_CkqiPKZBCgm6jw",
+    "headline"=> "HeadLineExemple",
+    "__v"=> 0
+);
+ echo json_encode($seedData);
 /*
  * Standard single-node URI format:
  * mongodb://[username:password@]host:port/[database]
  */
-//$uri="mongodb://Daveo:Daveo2017@ds157809.mlab.com:57809/books2-auth";
-//$client = new MongoDB\Client($uri);
+$uri="mongodb://Daveo:Daveo2017@ds157809.mlab.com:57809/books2-auth";
+$client = new MongoDB\Client($uri);
 /*
  * First we'll add a few songs. Nothing is required to create the songs
  * collection; it is created automatically when we insert.
  */
-//$users = $client->db->users;
+$users = $client->db->users;
 // To insert a dict, use the insert method.
-//$users->insertMany($seedData);
+$users->insertMany($seedData);
 /*
  * Then we need to give Boyz II Men credit for their contribution to
  * the hit "One Sweet Day".
@@ -61,7 +61,7 @@
    // echo ' straight weeks.', "\n";
 //}
 // Since this is an example, we'll clean up after ourselves.
-//$users->drop();
+$users->drop();
 
 
 //On définit dans $method la méthode d'envoie utilisée
@@ -122,7 +122,7 @@ if($method = "POST"){
 	$response-> fulfillmentText = $speech;
 
     //on écrit ici la source de la réponse : ici : webhook
-	$response->source= "webhook2";
+	$response->source= "webhook";
     //on encode $reponse pour l'avoir au format JSON
 	echo json_encode($response);
 
