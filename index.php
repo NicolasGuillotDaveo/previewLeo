@@ -34,7 +34,7 @@
    // echo ' straight weeks.', "\n";
 //}
 // Since this is an example, we'll clean up after ourselves.
-$users->drop();
+//$users->drop();
 
 
 //On définit dans $method la méthode d'envoie utilisée
@@ -85,7 +85,7 @@ if($method = "POST"){
 
 		default;
         // si l'action n'est pas connue
-			$speech=$DFresult+"héhé";
+			$speech=$DFresult;
 			break;
 
 	}
@@ -105,34 +105,34 @@ if($method = "POST"){
 }
 
 
-require 'vendor/autoload.php'; // include Composer's autoloader
+//require 'vendor/autoload.php'; // include Composer's autoloader
 // Create seed data
-$seedData =
-        array(
-    "_id" => array( "$oid" => "5b4db11b76e8f426dcaad304")
-    ,
-    "LinkedInID"=> "LinkedInIdExemple3",
-    "email"=> "Exemple@gmail.com",
-    "firstname"=> "FirstNameExemple",
-  "lastname"=> "LastNameExemple",
-    "image"=> "https://media.licdn.com/dms/image/C4E00AQGI1Fgn87sDdw/profile-originalphoto-shrink_900_1200/0?e=1531908000&v=beta&t=Hic2EeXt0gMHR0-fuI6YN3CtKy0X_CkqiPKZBCgm6jw",
-    "headline"=> "HeadLineExemple",
-    "__v"=> 0
-);
-echo json_encode($seedData);
+//$seedData =
+//        array(
+//    "_id" => array( "$oid" => "5b4db11b76e8f426dcaad304")
+  //  ,
+   // "LinkedInID"=> "LinkedInIdExemple3",
+   // "email"=> "Exemple@gmail.com",
+   // "firstname"=> "FirstNameExemple",
+ // "lastname"=> "LastNameExemple",
+  //  "image"=> "https://media.licdn.com/dms/image/C4E00AQGI1Fgn87sDdw/profile-originalphoto-shrink_900_1200/0?e=1531908000&v=beta&t=Hic2EeXt0gMHR0-fuI6YN3CtKy0X_CkqiPKZBCgm6jw",
+   // "headline"=> "HeadLineExemple",
+   // "__v"=> 0
+//);
+//echo json_encode($seedData);
 /*
  * Standard single-node URI format:
  * mongodb://[username:password@]host:port/[database]
  */
-$uri="mongodb://Daveo:Daveo2017@ds157809.mlab.com:57809/books2-auth";
-$client = new MongoDB\Client($uri);
+//$uri="mongodb://Daveo:Daveo2017@ds157809.mlab.com:57809/books2-auth";
+//$client = new MongoDB\Client($uri);
 /*
  * First we'll add a few songs. Nothing is required to create the songs
  * collection; it is created automatically when we insert.
  */
-$users = $client->db->users;
+//$users = $client->db->users;
 // To insert a dict, use the insert method.
-$users->insertMany($seedData);
+//$users->insertMany($seedData);
 
 
 ?>
