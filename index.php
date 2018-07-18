@@ -85,6 +85,10 @@ if($method = "POST"){
             $speech= $DFresult;
             break;
 
+        case 'enchante':
+            $speech="Hellllooo wooorld";
+            break;
+
 		case 'GiveInfo':
             //ici:algorithme recherche d'info de la personne
 			$speech= "tu es riadh- bien reçu";//réponse très simple pour l'instant
